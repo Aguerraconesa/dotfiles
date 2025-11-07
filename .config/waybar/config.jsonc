@@ -10,19 +10,19 @@
         "hyprland/workspaces",
         "hyprland/submap"
     ],
-    "modules-center": [
-        "hyprland/window"
-    ],
+//    "modules-center": [
+//        "hyprland/window"
+//    ],
     "modules-right": [
-        "idle_inhibitor",
+//        "idle_inhibitor",
         "pulseaudio",
         "network",
         "power-profiles-daemon",
-        "cpu",
+//        "cpu",
         "memory",
         "temperature",
         "backlight",
-        "hyprland/language",
+//        "hyprland/language",
         "battery",
         "clock",
         "tray",
@@ -157,7 +157,7 @@
       }
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        //"interface": "wlan0*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
