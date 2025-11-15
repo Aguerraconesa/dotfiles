@@ -1,65 +1,53 @@
 // fastfetch configuration
 {
-"logo": {
-        "type": "small",
-        "source": "fedora",
-        "width": 65,
-        "height": 35,
-        "padding":{
-                "top": 0,
-                "left": 0,
-                "right": 2
-},
-        "color":{
-                "1": "blue",
-                "2": "white"
-        }
+	"logo": {
+        	"type": "builtin",
+        	"source": "arch"
+	},
 
-},
+	"display": {
+        	"separator": ": ",
+        	"key": {
+                	"width": 12,
+                	"type": "string"
+        	},
+        	"bar": {
+                	"width": 10,
+                	"char": {
+                        	"elapsed": "■",
+                        	"total": "-",
+                	},
+        	},
+        	"percent": {
+                	"type": 9,
+                	"color": {
+                        	"green": "green",
+                        	"yellow": "light_yellow",
+                        	"red": "light_red"
+                	}
+        	}
+	},
 
-"display": {
-        "separator": ": ",
-        "color": {
-                "keys": "blue",
-                "title": "red"
-        },
-        "key": {
-                "width": 12,
-                "type": "string"
-        },
-        "bar": {
-                "width": 10,
-                "char": {
-                        "elapsed": "■",
-                        "total": "-",
-                },
-        },
-        "percent": {
-                "type": 9,
-                "color": {
-                        "green": "green",
-                        "yellow": "light_yellow",
-                        "red": "light_red"
-                }
-        }
-},
+	"modules": [
 
-"modules": [
-    "title",
-    "separator",
+
+    	"title",
+    	"separator",
     {
         "type": "os",
         "key": "OS",
-        "keyColor": "blue",
+        "keycolor": "green",
         "format": "{name} {version}"
     },
     {
         "type": "kernel",
-        "key": "Kernel"
+        "key": "Kernel",
+	"keycolor":"green"
     },
     {
         "type": "memory",
         "key": "Memory",
+	"keycolor":"green",
         "percent": {
             "type": 3,     // Show both percentage number and bar
             "green": 30,   // Values below 30% in green
@@ -69,11 +57,17 @@
     {
     	"type": "battery",
 	"key": "Bat",
+	"keycolor":"green",
 	"percent": {
 	    "type": 3,
 	    "red": 15,
 	    "green":40
 	}
+    },
+    {
+	    "type":"cpu",
+	    "key":"cpu",
+	    "keycolor":"yellow" 
     }
 ]
 }
