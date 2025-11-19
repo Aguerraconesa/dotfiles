@@ -39,13 +39,13 @@ window#waybar.hidden {
   background-color: rgba(30, 30, 46, 0.6);
   color: #cdd6f4;
   
-  border-bottom: 3px solid rgba(148, 226, 213, 1);
+/*  border-bottom: 3px solid rgba(148, 226, 213, 1); */
 }
 
 #workspaces button.active {
   background-color: rgba(30, 30, 46, 0.6);
   color: #cdd6f4;
-  border-bottom: 4px solid rgb(250, 179, 135);
+/*  border-bottom: 4px solid rgb(250, 179, 135); */
 }
 
 #workspaces button:hover {
@@ -56,7 +56,7 @@ window#waybar.hidden {
 }
 
 #workspaces button.urgent {
-  background-color: rgb(243, 139, 168);
+/*  background-color: rgb(243, 139, 168); */
 }
 
 #window {
@@ -102,15 +102,15 @@ window#waybar.hidden {
 }
 
 #pulseaudio {
-  border-bottom: 3px solid rgb(240,232,0);
+/*  border-bottom: 3px solid rgb(240,232,0); */
 }
 
 #power-profiles-daemon {
-  border-bottom: 3px solid rgb(24,74,184);
+/*  border-bottom: 3px solid rgb(245,74,200); */
 }
 
 #temperature {
-  border-bottom: 3px solid rgb(245,55,17);
+/*  border-bottom: 3px solid rgb(245,55,17); */
 }
 
 #memory {
@@ -118,23 +118,23 @@ window#waybar.hidden {
 }
 
 #battery {
-  border-bottom: 3px solid rgba(243, 139, 168, 1);
+/*  border-bottom: 3px solid rgba(243, 139, 168, 1); */
 }
 
 #battery.warning,
 #battery.critical,
 #battery.urgent {
   color: #FFFF00;
-  border-bottom: 3px solid rgba(255, 0, 0, 1);
+/*  border-bottom: 3px solid rgba(255, 0, 0, 1); */
 }
 
 #battery.charging {
-  color: #181825;
-  border-bottom: 3px solid rgba(166, 227, 161, 1);
+  color: white;
+/*  border-bottom: 3px solid rgba(166, 227, 161, 1); */
 }
 
 #backlight {
-  border-bottom: 3px solid rgba(250, 179, 135, 1);
+/*  border-bottom: 3px solid rgba(250, 179, 135, 1); */
 }
 
 #wireplumber {
@@ -143,16 +143,17 @@ window#waybar.hidden {
 
 #network {
   padding-right: 17px;
-  border-bottom: 3px solid rgba(148, 226, 213, 1);
+/*  border-bottom: 3px solid rgba(148, 226, 213, 1); */
 }
 
 #clock {
   font-family: JetBrainsMono Nerd Font;
-  border-bottom: 3px solid rgba(203, 166, 247, 1);
+/*  border-bottom: 3px solid rgba(203, 166, 247, 1); */
 }
 
 #custom-power {
-  border-bottom: 3px solid rgba(242, 205, 205, 1);
+  color: white;
+/*  border-bottom: 3px solid rgba(50, 50, 255, 1); */
 }
 
 

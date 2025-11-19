@@ -1,7 +1,7 @@
 // fastfetch configuration
 {
 	"logo": {
-        	"type": "builtin",
+        	"type": "small",
         	"source": "arch"
 	},
 
