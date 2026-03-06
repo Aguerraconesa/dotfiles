@@ -1,73 +1,106 @@
-// fastfetch configuration
 {
-	"logo": {
-        	"type": "small",
-        	"source": "arch"
-	},
-
-	"display": {
-        	"separator": ": ",
-        	"key": {
-                	"width": 12,
-                	"type": "string"
-        	},
-        	"bar": {
-                	"width": 10,
-                	"char": {
-                        	"elapsed": "■",
-                        	"total": "-",
-                	},
-        	},
-        	"percent": {
-                	"type": 9,
-                	"color": {
-                        	"green": "green",
-                        	"yellow": "light_yellow",
-                        	"red": "light_red"
-                	}
-        	}
-	},
-
-	"modules": [
-
-
-    	"title",
-    	"separator",
-    {
-        "type": "os",
-        "key": "OS",
-        "keycolor": "green",
-        "format": "{name} {version}"
-    },
-    {
-        "type": "kernel",
-        "key": "Kernel",
-	"keycolor":"green"
-    },
-    {
-        "type": "memory",
-        "key": "Memory",
-	"keycolor":"green",
-        "percent": {
-            "type": 3,     // Show both percentage number and bar
-            "green": 30,   // Values below 30% in green
-            "yellow": 70   // 30-70% in yellow, >70% in red
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "builtin",
+        "padding": {
+            "top": 2,
+            "left": 2
         }
     },
-    {
-    	"type": "battery",
-	"key": "Bat",
-	"keycolor":"green",
-	"percent": {
-	    "type": 3,
-	    "red": 15,
-	    "green":40
-	}
-    },
-    {
-	    "type":"cpu",
-	    "key":"cpu",
-	    "keycolor":"yellow" 
-    }
-]
+    "modules": [
+        "break",
+        {
+            "type": "custom",
+            "format": "\u001b[90m┌──────────────────────Hardware──────────────────────┐"
+        },
+        {
+            "type": "host",
+            "key": " PC",
+            "keyColor": "green"
+        },
+        {
+            "type": "cpu",
+            "key": "│ ├ CPU",
+            "keyColor": "green"
+        },
+        {
+            "type": "gpu",
+            "key": "│ ├󰍛 GPU",
+            "keyColor": "green"
+        },
+        {
+            "type": "disk",
+            "key": "│ ├ Disk",
+            "keyColor": "green"
+        },
+        {
+            "type": "memory",
+            "key": "└ └󰍛 Memory",
+            "keyColor": "green"
+        },
+
+        {
+            "type": "custom",
+            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+        },
+        "break",
+        {
+            "type": "custom",
+            "format": "\u001b[90m┌──────────────────────Software──────────────────────┐"
+        },
+        {
+            "type": "os",
+            "key": " OS",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "kernel",
+            "key": "│ ├ Kernel",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "packages",
+            "key": "│ ├󰏖 Packages",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "shell",
+            "key": "│ ├ Shell",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "wm",
+            "key": "│ ├",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "terminal",
+            "key": "└ └",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+        },
+        "break",
+        {
+            "type": "custom",
+            "format": "\u001b[90m┌──────────────────── Uptime / Age  ──────────────────────┐"
+        },
+        {
+            "type": "command",
+            "key": "  OS Age ",
+            "keyColor": "magenta",
+            "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
+        },
+        {
+            "type": "uptime",
+            "key": "  Uptime ",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[90m└─────────────────────────────────────────────────────────┘"
+        },
+    ]
 }
